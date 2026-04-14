@@ -1,20 +1,40 @@
 {
   "name": "summarizer-ai-mcp",
-  "description": "MEOK AI Labs \u2014 summarizer-ai-mcp \u2014 Summarize long articles and documents.",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/summarizer-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "summarizer-ai-mcp \u2014 Summarize long articles and documents.",
+  "version": "1.0.0",
   "tools": [
-    "run"
-  ],
-  "categories": [
-    "Productivity",
-    "Communication"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "summarize_text",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "sentences": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    {
+      "name": "bullet_points",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    }
+  ]
 }
