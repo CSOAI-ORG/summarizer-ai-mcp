@@ -1,9 +1,9 @@
 name: summarizer-ai-mcp
-description: "summarizer-ai-mcp \u2014 Summarize long articles and documents."
+description: Text summarization and extraction by MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: summarize_text
-  description: ''
+  description: Summarize text by extracting the most important sentences.
   parameters:
   - name: text
     type: string
@@ -11,9 +11,30 @@ tools:
   - name: sentences
     type: integer
     required: false
-- name: bullet_points
-  description: ''
+- name: extract_key_points
+  description: Extract key points from text as bullet points.
   parameters:
   - name: text
+    type: string
+    required: true
+  - name: max_points
+    type: integer
+    required: false
+- name: generate_abstract
+  description: Generate a concise abstract from longer text.
+  parameters:
+  - name: text
+    type: string
+    required: true
+  - name: max_words
+    type: integer
+    required: false
+- name: compare_summaries
+  description: Compare two texts by their key terms and structural similarity.
+  parameters:
+  - name: text_a
+    type: string
+    required: true
+  - name: text_b
     type: string
     required: true

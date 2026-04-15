@@ -1,11 +1,11 @@
 {
   "name": "summarizer-ai-mcp",
-  "description": "summarizer-ai-mcp \u2014 Summarize long articles and documents.",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Text summarization and extraction by MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
       "name": "summarize_text",
-      "description": "",
+      "description": "Summarize text by extracting the most important sentences.",
       "parameters": {
         "type": "object",
         "properties": {
@@ -22,17 +22,57 @@
       }
     },
     {
-      "name": "bullet_points",
-      "description": "",
+      "name": "extract_key_points",
+      "description": "Extract key points from text as bullet points.",
       "parameters": {
         "type": "object",
         "properties": {
           "text": {
             "type": "string"
+          },
+          "max_points": {
+            "type": "integer"
           }
         },
         "required": [
           "text"
+        ]
+      }
+    },
+    {
+      "name": "generate_abstract",
+      "description": "Generate a concise abstract from longer text.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "max_words": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    {
+      "name": "compare_summaries",
+      "description": "Compare two texts by their key terms and structural similarity.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text_a": {
+            "type": "string"
+          },
+          "text_b": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text_a",
+          "text_b"
         ]
       }
     }
