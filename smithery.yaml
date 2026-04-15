@@ -1,5 +1,6 @@
 name: summarizer-ai-mcp
-description: Text summarization and extraction by MEOK AI Labs.
+description: MCP server for summarizer ai. Features summarize text, extract key points,
+  generate abstract. From MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: summarize_text
