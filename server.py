@@ -63,11 +63,11 @@ def _score_sentences(sentences: list, freq: Counter) -> list:
     return scored
 
 
-mcp = FastMCP("summarizer-ai-mcp", instructions="Text summarization and extraction by MEOK AI Labs.")
+mcp = FastMCP("summarizer-ai", instructions="Text summarization and extraction by MEOK AI Labs.")
 
 
-@mcp.tool(name="summarize_text")
-async def summarize_text(text: str, sentences: int = 3, api_key: str = "") -> dict:
+@mcp.tool()
+def summarize_text(text: str, sentences: int = 3, api_key: str = "") -> dict:
     """Summarize text by extracting the most important sentences."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -96,8 +96,8 @@ async def summarize_text(text: str, sentences: int = 3, api_key: str = "") -> di
     }
 
 
-@mcp.tool(name="extract_key_points")
-async def extract_key_points(text: str, max_points: int = 5, api_key: str = "") -> dict:
+@mcp.tool()
+def extract_key_points(text: str, max_points: int = 5, api_key: str = "") -> dict:
     """Extract key points from text as bullet points."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -129,8 +129,8 @@ async def extract_key_points(text: str, max_points: int = 5, api_key: str = "") 
     }
 
 
-@mcp.tool(name="generate_abstract")
-async def generate_abstract(text: str, max_words: int = 100, api_key: str = "") -> dict:
+@mcp.tool()
+def generate_abstract(text: str, max_words: int = 100, api_key: str = "") -> dict:
     """Generate a concise abstract from longer text."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -167,8 +167,8 @@ async def generate_abstract(text: str, max_words: int = 100, api_key: str = "") 
     }
 
 
-@mcp.tool(name="compare_summaries")
-async def compare_summaries(text_a: str, text_b: str, api_key: str = "") -> dict:
+@mcp.tool()
+def compare_summaries(text_a: str, text_b: str, api_key: str = "") -> dict:
     """Compare two texts by their key terms and structural similarity."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
