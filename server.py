@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Text summarization and key-point extraction — MEOK AI Labs."""
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json
@@ -10,6 +9,15 @@ import math
 from datetime import datetime, timezone
 from collections import defaultdict, Counter
 from mcp.server.fastmcp import FastMCP
+
+STRIPE_199 = "https://buy.stripe.com/00wfZjcgAeUW4c5cyQ8k90K"
+
+def _add_upgrade_tail(response, tier="free"):
+    """Append upgrade nudge to free-tier success responses."""
+    if isinstance(response, dict) and tier == "free":
+        response["_upgrade_note"] = "Pro tier: unlimited calls + priority support. Upgrade: " + STRIPE_199
+    return response
+
 
 FREE_DAILY_LIMIT = 15
 _usage = defaultdict(list)
@@ -71,7 +79,7 @@ def summarize_text(text: str, sentences: int = 3, api_key: str = "") -> dict:
     """Summarize text by extracting the most important sentences."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(api_key or "anon"):
         return err
 
@@ -101,7 +109,7 @@ def extract_key_points(text: str, max_points: int = 5, api_key: str = "") -> dic
     """Extract key points from text as bullet points."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(api_key or "anon"):
         return err
 
@@ -134,7 +142,7 @@ def generate_abstract(text: str, max_words: int = 100, api_key: str = "") -> dic
     """Generate a concise abstract from longer text."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(api_key or "anon"):
         return err
 
@@ -172,7 +180,7 @@ def compare_summaries(text_a: str, text_b: str, api_key: str = "") -> dict:
     """Compare two texts by their key terms and structural similarity."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(api_key or "anon"):
         return err
 
@@ -208,5 +216,8 @@ def compare_summaries(text_a: str, text_b: str, api_key: str = "") -> dict:
     }
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
