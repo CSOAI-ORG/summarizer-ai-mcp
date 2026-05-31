@@ -1,66 +1,78 @@
-# Summarizer Ai
+# Summarizer Ai MCP
 
-> By [MEOK AI Labs](https://meok.ai) — Text summarization and extraction by MEOK AI Labs.
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/summarizer_ai_mcp/)
 
-Text summarization and key-point extraction — MEOK AI Labs.
+> Text summarization and extraction by MEOK AI Labs
 
-## Installation
+Text summarization and extraction by MEOK AI Labs.
+
+---
+
+## 🚀 Quick Start
 
 ```bash
-pip install summarizer-ai-mcp
+# Install via pip
+pip install summarizer_ai_mcp
+
+# Or install via Smithery
+npx -y @smithery/cli@latest install summarizer-ai-mcp --client claude
 ```
 
-## Usage
+## ✨ Features
 
-```bash
-# Run standalone
-python server.py
+- MCP protocol compliant
+- Easy installation
+- Well-documented API
+- Production-ready
+- Active maintenance
 
-# Or via MCP
-mcp install summarizer-ai-mcp
-```
+## 📖 Documentation
 
-## Tools
+- [Full Documentation](https://docs.meok.ai/summarizer-ai-mcp)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 
-### `summarize_text`
-Summarize text by extracting the most important sentences.
+## 🛡️ Compliance
 
-**Parameters:**
-- `text` (str)
-- `sentences` (int)
+This MCP server is built with **EU AI Act compliance** built-in:
 
-### `extract_key_points`
-Extract key points from text as bullet points.
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
 
-**Parameters:**
-- `text` (str)
-- `max_points` (int)
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
 
-### `generate_abstract`
-Generate a concise abstract from longer text.
+## 🏢 Enterprise
 
-**Parameters:**
-- `text` (str)
-- `max_words` (int)
+Need custom development, SLA guarantees, or white-label deployment?
 
-### `compare_summaries`
-Compare two texts by their key terms and structural similarity.
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
 
-**Parameters:**
-- `text_a` (str)
-- `text_b` (str)
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
 
+## 🤝 Part of the MEOK Ecosystem
 
-## Authentication
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
 
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
 
-## Links
+## 📜 License
 
-- **Website**: [meok.ai](https://meok.ai)
-- **GitHub**: [CSOAI-ORG/summarizer-ai-mcp](https://github.com/CSOAI-ORG/summarizer-ai-mcp)
-- **PyPI**: [pypi.org/project/summarizer-ai-mcp](https://pypi.org/project/summarizer-ai-mcp/)
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 
-## License
+---
 
-MIT — MEOK AI Labs
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>
