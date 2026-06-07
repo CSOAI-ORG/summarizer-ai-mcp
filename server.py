@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Text summarization and key-point extraction — MEOK AI Labs."""
+"""
+Text summarization and key-point extraction — MEOK AI Labs."""
 import sys, os
 from auth_middleware import check_access
 

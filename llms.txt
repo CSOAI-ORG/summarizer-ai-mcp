@@ -1,0 +1,33 @@
+# summarizer-ai-mcp
+# > By [MEOK AI Labs](https://meok.ai) — Text summarization and extraction by MEOK AI Labs.
+
+## Install
+```bash
+pip install summarizer-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `summarize_text`
+Summarize text by extracting the most important sentences.
+
+### `extract_key_points`
+Extract key points from text as bullet points.
+
+### `generate_abstract`
+Generate a concise abstract from longer text.
+
+### `compare_summaries`
+Compare two texts by their key terms and structural similarity.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

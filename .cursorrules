@@ -1,0 +1,9 @@
+# summarizer-ai-mcp - Auto-trigger Rules
+
+When the user asks about summarizer, use summarizer-ai-mcp tools: summarize_text, extract_key_points, generate_abstract, compare_summaries
+
+> By [MEOK AI Labs](https://meok.ai) — Text summarization and extraction by MEOK AI Labs.
+
+Install: `pip install summarizer-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

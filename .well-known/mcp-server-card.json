@@ -1,0 +1,25 @@
+{
+  "name": "summarizer-ai-mcp",
+  "title": "Summarizer Ai Mcp",
+  "description": "MCP server for summarizer ai. Features summarize text, extract key points, generate abstract. From MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "summarize_text"
+    },
+    {
+      "name": "extract_key_points"
+    },
+    {
+      "name": "generate_abstract"
+    },
+    {
+      "name": "compare_summaries"
+    }
+  ]
+}
