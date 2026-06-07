@@ -1,0 +1,59 @@
+{
+  "name": "summarizer-ai-mcp",
+  "description": "MCP server for summarizer ai. Features summarize text, extract key points, generate abstract. From",
+  "url": "https://proofof.ai/scorecard/summarizer-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "summarize_text",
+      "name": "Summarize Text",
+      "description": "summarize_text via summarizer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "extract_key_points",
+      "name": "Extract Key Points",
+      "description": "extract_key_points via summarizer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_abstract",
+      "name": "Generate Abstract",
+      "description": "generate_abstract via summarizer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "compare_summaries",
+      "name": "Compare Summaries",
+      "description": "compare_summaries via summarizer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

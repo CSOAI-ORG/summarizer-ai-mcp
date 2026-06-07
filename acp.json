@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "summarizer-ai-mcp",
+    "description": "MCP server for summarizer ai. Features summarize text, extract key points, generate abstract. From",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "summarizer-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "summarize_text",
+      "extract_key_points",
+      "generate_abstract",
+      "compare_summaries"
+    ]
+  }
+}
